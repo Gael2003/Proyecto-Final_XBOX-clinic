@@ -1,0 +1,35 @@
+<!-- contacto.html -->
+
+{% extends 'base.html' %}
+
+{% block title %}Contacto - XBOX Clinic{% endblock %}
+
+{% block content %}
+    <section id="contacto" class="justificado">
+        <h2>Contacto</h2>
+        <p>Para un mejor contacto, síguenos en redes sociales:</p>
+        <ul>
+            <li>Facebook:</li>
+            <li>Instagram:</li>
+        </ul>
+
+        {% if 'usuario_id' in session %}
+            <form action="{{ url_for('guardar_comentario') }}" method="post">
+                <label for="comentario">Comentario:</label>
+                <textarea id="comentario" name="comentario" required></textarea>
+
+                <input type="submit" value="Enviar comentario">
+            </form>
+        {% else %}
+            <p>Debes <a href="{{ url_for('inicio_sesion') }}">iniciar sesión</a> para comentar.</p>
+        {% endif %}
+
+        <!-- Mostrar comentarios existentes -->
+        <h3>Comentarios anteriores:</h3>
+        <ul>
+            {% for comentario in comentarios %}
+                <li>{{ comentario[0] }}: {{ comentario[1] }}</li>
+            {% endfor %}
+        </ul>
+    </section>
+{% endblock %}

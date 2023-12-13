@@ -1,0 +1,23 @@
+<!-- registro.html -->
+
+{% extends 'base.html' %}
+
+{% block title %}Registro - XBOX Clinic{% endblock %}
+
+{% block content %}
+    <section id="registro">
+        <h2>Registro</h2>
+        <form action="{{ url_for('registro') }}" method="post">
+            <label for="correo">Correo:</label>
+            <input type="email" id="correo" name="correo" required>
+
+            <label for="contrasena">Contraseña:</label>
+            <input type="password" id="contrasena" name="contrasena" required>
+
+            <label for="nombre_usuario">Nombre de Usuario:</label>
+            <input type="text" id="nombre_usuario" name="nombre_usuario" required>
+
+            <input type="submit" value="Registrarse">
+        </form>
+    </section>
+{% endblock %}

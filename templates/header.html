@@ -1,0 +1,21 @@
+<!-- header.html -->
+
+<header>
+    <!-- Imagen en el extremo izquierdo del encabezado -->
+    <img class="extremo-imagen extremo-izquierdo" src="{{ url_for('static', filename='images/imagen_izquierda.png') }}" alt="Imagen izquierda">
+
+    <h1>XBOX Clinic</h1>
+    <p class="subtitle">Servicio de reparación múltiple</p>
+
+    <nav>
+        <ul>
+            <li><a href="/" class="nav-button">Inicio</a></li>
+            <li><a href="/nosotros" class="nav-button">Nosotros</a></li>
+            <li><a href="/servicios" class="nav-button">Servicios</a></li>
+            <li><a href="/contacto" class="nav-button">Contacto</a></li>
+        </ul>
+    </nav>
+
+    <!-- Imagen en el extremo derecho del encabezado -->
+    <img class="extremo-imagen extremo-derecho" src="{{ url_for('static', filename='images/imagen_derecha.png') }}" alt="Imagen derecha">
+</header>

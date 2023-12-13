@@ -1,0 +1,40 @@
+<!-- index.html -->
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <title>XBOX Clinic - Servicio de reparación múltiple</title>
+</head>
+<body>
+    {% include 'header.html' %}
+
+    <section id="inicio">
+        <div style="text-align: center;">
+            <h2>Bienvenido a XBOX Clinic</h2>
+            <p>La mejor opción en servicio de mantenimiento, arreglo y limpieza para controles y consolas de todo tipo.</p>
+
+            <!-- Lugar para la imagen del inicio -->
+            <img src="{{ url_for('static', filename='images/imagen_inicio.jpg') }}" alt="Imagen de inicio"width="600" height="300">
+            
+            <p>Se libre de visitar cada sección de esta página para conocer un poco más sobre XBOX clinic y como puede beneficiarte.</p>
+
+            <!-- Texto y lista de ítems justificados -->
+            <div style="text-align: justify;">
+                <p>Nuestras secciones:</p>
+                <ul style="list-style-position: inside;">
+                    <li>Nosotros: Te mostramos un poco de nuestra trayectoria y meta como un servicio de reparación.</li>
+                    <li>Servicios: Aquí detallamos todo lo que ofrecemos, espera actualizaciones y ofertas.</li>
+                    <li>Contacto: Contamos con contacto directo a través de redes sociales y contamos con sección de comentarios público.</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2023 XBOX Clinic</p>
+    </footer>
+</body>
+</html>

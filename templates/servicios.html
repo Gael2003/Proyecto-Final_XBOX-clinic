@@ -1,0 +1,50 @@
+<!-- servicios.html -->
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <title>Servicios - XBOX Clinic</title>
+</head>
+<body>
+    {% include 'header.html' %}
+
+    <section id="servicios" class="centrado">
+        <h2>Servicios</h2>
+        <p>Por el momento, XBOX Clinic cuenta con los siguientes servicios, ¡esperando actualizarlos en un futuro!</p>
+
+        <div class="servicio">
+            <img src="{{ url_for('static', filename='images/imagen_drift.jpg') }}" alt="Drift de palancas"width="600" height="300">
+            <p>Drift de palancas (Joystick)</p>
+        </div>
+
+        <div class="servicio">
+            <img src="{{ url_for('static', filename='images/imagen_botones.jpg') }}" alt="Problemas con botones"width="600" height="300">
+            <p>Problemas con botones</p>
+        </div>
+
+        <div class="servicio">
+            <img src="{{ url_for('static', filename='images/imagen_limpieza.jpg') }}" alt="Limpieza de controles"width="600" height="300">
+            <p>Limpieza de controles</p>
+        </div>
+
+        <div class="servicio">
+            <img src="{{ url_for('static', filename='images/imagen_mantenimiento.jpg') }}" alt="Mantenimiento general"width="600" height="300">
+            <p>Mantenimiento general a controles y consolas</p>
+        </div>
+
+        <div class="servicio">
+            <img src="{{ url_for('static', filename='images/imagen_piezas.jpg') }}" alt="Piezas específicas por encargo"width="600" height="300">
+            <p>Piezas específicas por encargo</p>
+        </div>
+
+        <p>Trabajamos con controles de Xbox, PS4 y Nintendo Switch.</p>
+    </section>
+
+    <footer>
+        <p>&copy; 2023 XBOX Clinic</p>
+    </footer>
+</body>
+</html>

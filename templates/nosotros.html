@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <title>Nosotros - XBOX Clinic</title>
+</head>
+<body>
+    {% include 'header.html' %}
+
+    <section id="nosotros" class="centrado">
+        <h2>Nosotros</h2>
+        <p>
+            Desde 2022 que inició este proyecto se ha buscado la mejoría en cada trabajo completo y entregado en tiempo.
+            Con cada oportunidad depositada en XBOX clinic, cada día se aprende mucho más, tanto en la experiencia electrónica
+            como en la calidad del servicio.
+            Si bien todo inicio como una forma rápida de solventar gastos, se espera de XBOX clinic un lugar seguro y confiable
+            para mantener la vida de tus aparatos electrónicos.
+            Nuestra meta: Crecer y mejorar cada día para brindar siempre el mejor servicio.
+        </p>
+
+        <!-- Imagen centrada después del texto -->
+        <img src="{{ url_for('static', filename='images/imagen_nosotros.jpg') }}" alt="Nosotros" class="imagen-nosotros"width="600" height="300">
+
+    </section>
+
+    <footer>
+        <p>&copy; 2023 XBOX Clinic</p>
+    </footer>
+</body>
+</html>
